@@ -1,58 +1,419 @@
-<!doctype html>
-<html lang="en-US">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title> Moja pierwsza strona testowa</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal homepage of John Smith">
+    <title>John Smith - Personal Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
 
-		<!-- dodajemy skrypt CSSa-->
-		<!--- <link href="styles/style.css" rel="stylesheet" /> ---/>
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
-	</head>
-	
-	<body>
-		<!--Tu jest mój pierwszy komentarz-->
+        header .header-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
 
-		<h1>Hi! I'm Marek.</h1>
-		<img src="images/ja-ulriken.png" alt="Obraz przedstawia mnie na ruliken. Obraz zrobiony przez Natalie" />
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
 
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
 
-		<!-- Tak się wstawia komentarze-->
-		<p>I'm softewer developer, Python entusiasts,with passion in electronics and robotics.<br>
-			I hold PhD in computer science and Master's in Electronics and telecomunication.<br>
-			Up to now, my research evolved around biomedical image processing and analysis mainly in MRI and CT.<br><br></p>
+        header p {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
 
-			I have experiecne in computer vision, image modeling, processing and analysis, pattern recognition and 3D visualization. Namely: 
-			 <ul>
-				<li>computer vision, pattern recognition</li>
-				<li>data science: data analysis (Pandas), machine learning (scikt-lean), deep learning (FastAI, PyTorch),</li>
-				<li>2D/3D image processing, analysis, quantification (among other: ITK, scipy.ndimage, PIL,....)</li>
-				<li>3D modeling and visualization of strucures decpicted in images (OpenGL, VTK, Pafaview, Mayavi,..)</li>
-				<li>wisualization Matplotlib, Seaborn,.. </li>
-				<li>graphical user interface (Qt, WxWidgets, Borland builder ;-D )</li>
-				<li>bimedical image file formats NIfTI, Dicom (Nibabel, Pydicom, ITK-SNAP),</li>
-				<li>programming languages: Python, C++, Matlab, R (basic),</li>
-				<li>Linux, Bash, LaTeX, LibreOffice, GitHub,...</li>
-			 </ul>  
-			  
-			However my hobby lies in:
-			<ul>
-				<li>electronics (mbedded systems, robotics, drones, smart homes, IoT, CPLD, FPGA), </li>
-				<li>photograpy,</li>
-				<li>hiking,</li>
-				<li>cooking.</li>
-			</ul>
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
 
-			My links:
-			<ul>
-				<li><a href=http://www.eletel.p.lodz.pl/med/pl/index.php?option=com_content&view=article&id=140&Itemid=174">My webpage</a>
-					 in my previous job at the <a href="http://www.eletel.p.lodz.pl/eng/">Institute of Electronics</a>,
-					<a href="https://p.lodz.pl/en"> Lodz University of Technology</a>.</li>
-				<li><a href="http://www.github.com/marekkoc">GitHub</a></li>
-				<li><a>Orcid</a>, <a>ResearchGate</a>, <a>Scopus</a>, <a>GoogleScholar</a></li>
-			</ul>
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
-			<!--dodajemy java scripts-->
-			<script src="scripts/main.js"></script>	
-	</body>
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* About Me */
+        .about {
+            background-color: #f4f4f4;
+        }
+
+        .about h2 {
+            font-size: 2em;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
+        /* Skills */
+        .skills {
+            background-color: #fff;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .skills ul li {
+            font-size: 1.1em;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Professional Experience */
+        .experience {
+            background-color: #f4f4f4;
+        }
+
+        .experience h2 {
+            font-size: 2em;
+        }
+
+        .experience p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            background-color: #fff;
+        }
+
+        .portfolio h2 {
+            font-size: 2em;
+        }
+
+        .portfolio img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .portfolio .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .portfolio .project {
+            width: 30%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Education */
+        .education {
+            background-color: #f4f4f4;
+        }
+
+        .education h2 {
+            font-size: 2em;
+        }
+
+        .education p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        /* Teaching */
+        .teaching {
+            background-color: #fff;
+        }
+
+        .teaching h2 {
+            font-size: 2em;
+        }
+
+        .teaching p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        /* Supervision */
+        .supervision {
+            background-color: #f4f4f4;
+        }
+
+        .supervision h2 {
+            font-size: 2em;
+        }
+
+        .supervision p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        /* Publications */
+        .publications {
+            background-color: #fff;
+        }
+
+        .publications h2 {
+            font-size: 2em;
+        }
+
+        .publications ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .publications ul li {
+            font-size: 1.1em;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            display: none;
+            cursor: pointer;
+        }
+
+        #back-to-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="https://via.placeholder.com/150" alt="John Smith Photo">
+            <h1>John Smith</h1>
+            <p>Welcome to my personal homepage</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Selected Projects</a>
+        <a href="#education">Education</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#supervision">Supervision</a>
+        <a href="#publications">Publications</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am John Smith, a software engineer with over 10 years of experience in developing web and mobile applications. I am passionate about creating innovative solutions that help businesses grow and thrive in the digital space.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, JavaScript, HTML, CSS</li>
+            <li>Frameworks: Django, Flask, React, Node.js</li>
+            <li>Databases: MySQL, PostgreSQL, MongoDB</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>DevOps: Docker, Kubernetes, Jenkins</li>
+        </ul>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="experience">
+        <h2>Professional Experience</h2>
+        <p>
+            <strong>Senior Software Engineer - ABC Corp (2018 - Present)</strong><br>
+            Responsible for leading a team of developers in building scalable web applications for e-commerce clients.<br><br>
+
+            <strong>Software Developer - XYZ Tech (2014 - 2018)</strong><br>
+            Developed various tools and systems for optimizing business processes, focusing on improving user experience and performance.
+        </p>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Selected Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Project 1</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <p>A brief description of project 1.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <p>A brief description of project 2.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <p>A brief description of project 3.</p>
+            </div>
+            <div class="project">
+                <h3>Project 4</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 4">
+                <p>A brief description of project 4.</p>
+            </div>
+            <div class="project">
+                <h3>Project 5</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 5">
+                <p>A brief description of project 5.</p>
+            </div>
+            <div class="project">
+                <h3>Project 6</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 6">
+                <p>A brief description of project 6.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <p>
+            <strong>MSc in Computer Science - University of Technology (2012 - 2014)</strong><br>
+            Focus on software development and machine learning.<br><br>
+
+            <strong>BSc in Information Technology - Tech Institute (2008 - 2012)</strong><br>
+            Graduated with honors, specializing in web development.
+        </p>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="teaching">
+        <h2>Teaching</h2>
+        <p>
+            I have conducted various workshops and courses on modern web development practices, including HTML5, CSS3, JavaScript, and Python. I enjoy sharing my knowledge and helping others grow in their programming careers.
+        </p>
+    </section>
+
+    <!-- Supervision Section -->
+    <section id="supervision" class="supervision">
+        <h2>Supervision</h2>
+        <p>
+            Over the past few years, I have supervised several undergraduate and master's theses, focusing on web development, artificial intelligence, and cloud computing. I take pride in guiding students towards achieving their academic goals.
+        </p>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li>"Optimizing Web Application Performance with React.js" - Tech Journal, 2022</li>
+            <li>"Advances in Machine Learning Algorithms for E-commerce" - AI Research Review, 2021</li>
+            <li>"The Future of Cloud Computing in Enterprise" - TechWorld Magazine, 2020</li>
+        </ul>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top">Back to Top</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 John Smith. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Back to Top button functionality
+        var backToTopBtn = document.getElementById("back-to-top");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        backToTopBtn.onclick = function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
+
+</body>
 </html>
+
