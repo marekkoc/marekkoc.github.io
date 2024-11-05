@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal homepage of Marek Kocinski">
+    <meta name="keywords" content="Marek Kocinski, Software Engineer, Computer scientist, Data scientist, 3D visualization">
+    <meta name="author" content="Marek Kocinski">
+    
+    
+    <title>Marek Kociński - Personal Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 16px;
+            }
+
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header .header-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* About Me */
+        .about {
+            background-color: #f4f4f4;
+        }
+
+        .about h2 {
+            font-size: 2em;
+        }
+
+        .about p {
+            text-align: justify;
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;            
+        }
+
+        /* Skills */
+        .skills {
+            background-color: #fff;
+        }
+
+        .skills h2 {
+            font-size: 2em;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        .skills ul li {
+            font-size: 1.1em;
+            margin-bottom: 5px; /* Zmniejsza odstep miedzy elementami listy */
+            padding: 0;         /* Opcjonalnie usuwa dodatkowy padding */
+            text-align: left;
+            line-height: 1.2;  /* Zmniejsza odstepy miedzy liniami tekstu */
+        }
+
+        /* Professional Experience */
+        .experience {
+            background-color: #f4f4f4;
+        }
+
+        .experience h2 {
+            font-size: 2em;
+        }
+
+        .experience p {
+            text-align: justify;
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            background-color: #fff;
+        }
+
+        .portfolio h2 {
+            font-size: 2em;
+        }
+
+        .portfolio img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .portfolio .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .portfolio .project {
+            width: 30%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        @media (max-width: 768px) {
+             .portfolio .project {
+                width: 100%; /* Sprawi, że projekty będą wyświetlać się w jednej kolumnie na mniejszych ekranach */
+                margin-bottom: 20px;
+            }
+        }
+
+
+        /* Education */
+        .education {
+            background-color: #f4f4f4;
+        }
+
+        .education h2 {
+            font-size: 2em;
+        }
+
+        .education p {
+            text-align: justify;
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
+        /* Teaching */
+        .teaching {
+            background-color: #fff;
+        }
+
+        .teaching h2 {
+            font-size: 2em;
+        }
+
+        .teaching p {
+            text-align: justify;
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;            
+        }
+
+        /* Supervision */
+        .supervision {
+            background-color: #f4f4f4;
+        }
+
+        .supervision h2 {
+            font-size: 2em;
+        }
+
+        .supervision p {
+            text-align: justify;
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
+        /* Publications */
+        .publications {
+            background-color: #fff;
+        }
+
+        .publications h2 {
+            font-size: 2em;
+        }
+
+        .publications p {
+            text-align: justify;
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 1.1em;
+        }
+
+        .publications ul {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .publications ul li {
+            font-size: 1.1em;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            display: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="images/ja-koszula-150-150.jpg" alt="Marek's Photo">
+            <h1>Marek Kociński</h1>
+            <p>Welcome to my personal homepage</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Selected Projects</a>
+        <a href="#education">Education</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#supervision">Supervision</a>
+        <a href="#publications">Publications</a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Python and C++ software developer with a strong background in computer science, data science, computer vision, image analysis and 3D visualization. 
+            I am passionate about electronics: embeded systems, roborics, smart homes
+            (<a href="pdfs/MKocinski-CV-full.pdf" download>my CV</a>).              
+        </p>
+        <p></p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, C++, Matlab, R.</li>
+            <li><strong>Scripting & OS:</strong> Bash, Linux.</li>
+            <li><strong>Tools & Libraries:</strong> OpenGL, Insight Toolkit (ITK), The Visualization Toolkit (VTK), Qt, WxWidgets, Tkinter.</li>
+            <li><strong>Data Analysis & Visualization:</strong> Pandas, Matplotlib, Seaborn.</li>
+            <li><strong>Medical Imaging:</strong> DICOM, NIfTI, ITK-SNAP, Paraview.</li>
+            <li><strong>Machine Learning & Deep Learning:</strong> scikit-learn, PyTorch, FastAI.</li>
+            <li><strong>Version Control & Document Preparation:</strong> Git, LaTeX, LibreOffice.</li>
+        </ul>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="experience">
+        <h2>Professional Experience</h2>
+        <p>
+            <strong>Assistant Professor - Lodz University of Technology, Poland (2009 - 2023)</strong><br>
+            Researcher. Developed various tools and system for biomedical image analysis and visualization. 
+            Responsible for research, teaching, MSc and BSc supervision.<br><br>
+
+            <strong>Postdoctoral Fellow, Researcher - University of Bergen, Norway (2019 - 2022)</strong><br>
+            Researcher, data scientist, Python software developer: ML/DL algorithms and 3D visualization.
+        </p>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Selected Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Skull stripping in a large and
+                    heterogeneous set of head MRI using</h3>
+                <img src="images/skull.png" alt="skull stripping">
+                <p>Application of 2D and 3D Deep Neural Network models to remove of the parts of 3D MR images that correspond to non-brain tissue.</p>
+            </div>
+            <div class="project">
+                <h3>Predicting conversion to Alzheimer’s Disease in individuals with
+                    Mild Cognitive Impairment</h3>
+                <img src="images/alzheimer.png" alt="Project 3">
+                <p>Machine Learning. Random Forests.</p>
+            </div>         
+            <div class="project">
+                <h3>Geometric modeling of vascular system</h3>
+                <img src="images/modelowaie.png" alt="modelowanie">
+                <p>Geometric description and modeling of segmented
+                     arteries and veins based on 3D MR images.</p>
+            </div>
+            <div class="project">
+                <h3>Segmentation and modeling of brain vascular system </h3>
+                <img src="images/semgmentacja-modelowanie.png" alt="segmentacja i modelowanie">
+                <p>Segmentation and 3D modeling of blood vessels depicted in 3D MR image.</p>
+            </div>
+            <div class="project">
+                <h3>3D raster image simulation</h3>
+                <img src="images/conversion.png" alt="3D raster image simulator">
+                <p>Convertion of vector described vascular tree to 3D raster image.</p>
+            </div>
+            <div class="project">
+                <h3>Computer simulation of vascular tree growth</h3>
+                <img src="images/vasculat-tree.png" alt="vascular tree growth">
+                <p>Computer simulation of vascular tree growth.</p>
+            </div>
+            <div class="project">
+                <h3>The KIWI fruit seed segmentation</h3>
+                <img src="images/seeds_final_paraview.png" alt="KIWI fruit seed segmentation">
+                <p>Image processing based <a href="https://github.com/marekkoc/Kiwi2021/blob/main/kiwi-segm1.ipynb" target="_blank"> approach,
+                     3D model and visualization</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <p>
+            <strong>PhD in Computer Science - The Technical University of Lodz (2003 - 2009)</strong><br>
+            Focus on software development, machine learning and 3D visualization.
+            The thesis <em>Quantitative analysis of vascular trees represented by digital images</em>was distinguished by the
+            Council of the Faculty of Electrical, Electronic, Computer and Control Engineering.<br><br>
+
+            <strong>MSc in Electronics and Telecomunication - The Technical University of Lodz (1997 - 2003)</strong><br>
+            Master’s thesis: <em>Implementation of Two-Dimensional ADPCM in an FPGA System for Encoding Low-Frequency Wavelet Transform Coefficient</em>
+        </p>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="teaching">
+        <h2>Teaching</h2>
+        <p>
+            I have conducted various undergraduate and graduate-level courses on Image Processing, Computer Graphics, Digital Signal Processing, Algorithms and Data Structures,
+            Fundamentals of Programming, Microprocessors Systems, Electronic Circuits, Digital Systems, Graphical User Interface Designing and Medical Imaging. <br>
+            I enjoy sharing my knowledge and helping others grow in their programming careers.           
+        </p>
+    </section>
+
+    <!-- Supervision Section -->
+    <section id="supervision" class="supervision">
+        <h2>Supervision</h2>
+        <p>            
+            I have supervised more than 40 bachelor’s and master’s theses and co-supervised a doctoral thesis, guiding students projects in areas like:
+            artificial intelligence, data science, machine learning, deep learning, computer vision, biomedical image processing and analysis, 3D computer graphics, robotics,
+            and medical imaging. <br><br>
+            I have regularly organized and led seminars and workshops to deepen students' understanding of topics such as computer science, fundamentals of programming,
+            fundamentals of image processing and 3D visualization.
+        </p>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications">
+        <h2>Publications</h2>
+        <p>
+        I am the co-author of approximately 60 scientific publications.  My work has been featured in reputable journals and presented at international conferences, 
+        contributing to advancements in biomedical engineering applications.
+            
+    </p>
+       <!--- <ul>
+            <li>"Optimizing Web Application Performance with React.js" - Tech Journal, 2022</li>
+            <li>"Advances in Machine Learning Algorithms for E-commerce" - AI Research Review, 2021</li>
+            <li>"The Future of Cloud Computing in Enterprise" - TechWorld Magazine, 2020</li>
+        </ul> --->
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top">Back to Top</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Marek Kociński. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Back to Top button functionality
+        var backToTopBtn = document.getElementById("back-to-top");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        backToTopBtn.onclick = function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
+
+</body>
+</html>
+
