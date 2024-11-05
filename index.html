@@ -16,14 +16,17 @@
             padding: 0;
             line-height: 1.6;
             color: #333;
-            /*overflow-x: hidden; /* Ukrywa poziome przewijanie */
         }
         
          .container {
-                  display: flex;
-                  flex-wrap: wrap;
-                  gap: 16px;
-                }
+              display: flex;
+              flex-wrap: wrap;
+              gap: 16px;
+            }
+        .content-container {
+                overflow-x: hidden;
+            }
+
 
         img, video {
               max-width: 100%;
@@ -75,6 +78,15 @@
             top: 0;
             z-index: 1000;
         }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* upewnij się, że jest ponad resztą */
+        }
+
 
         nav a {
             color: #fff;
