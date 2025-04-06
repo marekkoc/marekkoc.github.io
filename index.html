@@ -316,6 +316,54 @@
         #back-to-top:hover {
             background-color: #555;
         }
+
+        /* Kontakt i Linki */
+        .contact {
+            background-color: #f4f4f4;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+        }
+
+        .links-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .link-item {
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .link-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .link-item i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .link-item a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-item a:hover {
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -339,7 +387,7 @@
         <a href="#teaching">Teaching</a>
         <a href="#supervision">Supervision</a>
         <a href="#publications">Publications</a>
-        <a href="#contact">Kontakt i Linki</a>
+        <a href="#contact">Contact and Links</a>
     </nav>
 
     <!-- About Me Section -->
@@ -476,6 +524,33 @@
             <li>"Advances in Machine Learning Algorithms for E-commerce" - AI Research Review, 2021</li>
             <li>"The Future of Cloud Computing in Enterprise" - TechWorld Magazine, 2020</li>
         </ul> --->
+    </section>
+
+    <!-- Kontakt i Linki Section -->
+    <section id="contact" class="contact">
+        <h2>Contact and Links</h2>
+        <div class="links-container">
+            <div class="link-item">
+                <i class="fa fa-file-text"></i>
+                <a href="pdfs/MKocinski-CV-full.pdf" download>CV full</a>
+            </div>
+            <div class="link-item">
+                <i class="fa fa-file-text-o"></i>
+                <a href="pdfs/MKocinski-CV-short.pdf" download>CV short</a>
+            </div>
+            <div class="link-item">
+                <i class="fa fa-github"></i>
+                <a href="https://github.com/marekkoc" target="_blank">GitHub</a>
+            </div>
+            <div class="link-item">
+                <i class="fa fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/marek-kocinski-285a64110/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="link-item">
+                <i class="fa fa-book"></i>
+                <a href="pdfs/MKocinski-publications-by-projects.pdf" download>Publications list</a>
+            </div>
+        </div>
     </section>
 
     <!-- Back to Top Button -->
