@@ -1,0 +1,4 @@
+<table align="center">
+  <tr><td><img src="figs/viewer.png" alt="Selected slice of Contrast-enhanced T1 sequence and SWI without contrast image"></td></tr>
+  <tr><td align="center"><i><span style="font-size:smaller;">Fig. 1: Selected slice of Contrast-enhanced T1 sequence and SWI without contrast</span></i></td></tr>
+</table>

@@ -1,0 +1,9 @@
+<table align="center">
+  <tr>
+    <td><img src="figs/results1.png" alt="Results 1"></td>
+    <td><img src="figs/results2.png" alt="Results 2"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><i><span style="font-size:smaller;">Fig. 1: Example results of texture analysis on DCE-MRI parameter maps</span></i></td>
+  </tr>
+</table>

@@ -1,0 +1,3 @@
+&nbsp; - twarda spacja
+<sup>3</sup> - indeks gorny
+&deg; - symbol stopnia np. celciusza
